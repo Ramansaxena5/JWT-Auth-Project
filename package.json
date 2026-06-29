@@ -1,0 +1,9 @@
+{
+  "name": "jwt-auth-project",
+  "version": "1.0.0",
+  "description": "Root package to run both frontend and backend concurrently",
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "start": "npx concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\""
+  }
+}

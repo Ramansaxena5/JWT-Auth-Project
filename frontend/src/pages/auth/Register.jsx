@@ -131,6 +131,7 @@ const Register = () => {
           >
             <option value="user">User</option>
             <option value="manager">Manager</option>
+            <option value="admin">Admin</option>
           </select>
 
           <button type="submit" disabled={loading} style={styles.button}>

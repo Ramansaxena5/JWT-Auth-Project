@@ -18,13 +18,13 @@ const app = express();
 
 app.use(
   cors({
-    origin:
-      process.env.CLIENT_URL ||
-      "https://jwt-auth-project-m7b1271lk-ritikshajain6-1582s-projects.vercel.app" ||
+    origin: [
+      process.env.CLIENT_URL,
+      "https://jwt-auth-project-m7b1271lk-ritikshajain6-1582s-projects.vercel.app",
       "http://localhost:3000",
-
+    ].filter(Boolean),
     credentials: true,
-  }),
+  })
 );
 
 app.use(express.json());
